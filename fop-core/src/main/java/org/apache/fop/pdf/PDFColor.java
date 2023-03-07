@@ -291,9 +291,9 @@ public class PDFColor extends PDFPathPaint {
             // according to pdfspec 12.1 p.399
             // if the colors are the same then just use the g or G operator
             boolean same = false;
-            if (this.red == this.green && this.red == this.blue) {
-                same = true;
-            }
+            // if (this.red == this.green && this.red == this.blue) {
+            //     same = true;
+            // }
             // output RGB
             if (fillNotStroke) {
                 // fill

@@ -205,12 +205,12 @@ public class PDFColorHandler {
         if (alpha) {
             writeAlpha(color, codeBuffer);
         }
-        if (ColorUtil.isGray(color)) {
-            comps = new float[] {comps[0]}; //assuming that all components are the same
-            writeColor(codeBuffer, comps, 1, (fill ? "g" : "G"));
-        } else {
-            writeColor(codeBuffer, comps, 3, (fill ? "rg" : "RG"));
-        }
+        // if (ColorUtil.isGray(color)) {
+        //     comps = new float[] {comps[0]}; //assuming that all components are the same
+        //     writeColor(codeBuffer, comps, 1, (fill ? "g" : "G"));
+        // } else {
+        writeColor(codeBuffer, comps, 3, (fill ? "rg" : "RG"));
+        // }
     }
 
     private void writeAlpha(Color color, StringBuffer codeBuffer) {
